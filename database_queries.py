@@ -1,7 +1,7 @@
 import psycopg2
 
 conn = psycopg2.connect(
-    host="localhost",
+    host="135.225.108.173",
     database="app_database",
     user="katypap",
     password="katypap",
@@ -18,9 +18,18 @@ def insert_into_table(table_name, items):
         """)
     conn.commit()
 
+def select_from_table(table_name):
+  cursor.execute("SELECT * FROM FRUITS")
+  rows = cursor.fetchall()
+  return rows
+
+
+  
 # Example query
-cursor.execute("SELECT * FROM FRUITS")
-rows = cursor.fetchall()
+table_name = 'FRUITS'
+items = ['Apple']
+insert_into_table(table_name, items)
+rows = select_from_table(table_name)
 print(rows)
 
 cursor.close()
