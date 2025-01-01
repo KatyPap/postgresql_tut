@@ -1,0 +1,11 @@
+git clone https://github.com/KatyPap/postgresql_tut.git
+
+
+cd ~/postgresql_tut
+git pull origin master
+
+#stop and delete all containers curently running 
+sudo docker rm -f $(sudo docker ps -a -q)
+
+sudo docker build -t postgresql .
+sudo docker run -d -p 8000:8000 postgresql
