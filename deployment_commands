@@ -5,7 +5,8 @@ cd ~/postgresql_tut
 git pull origin master
 
 #stop and delete all containers curently running 
-sudo docker rm -f $(sudo docker ps -a -q)
+# sudo docker rm -f $(sudo docker ps -a -q)
+# sudo docker build -t postgresql .
+# sudo docker run -d -p 5432:5432 postgresql
 
-sudo docker build -t postgresql .
-sudo docker run -d -p 5432:5432 postgresql
+docker compose up -d --force-recreate
