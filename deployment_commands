@@ -8,4 +8,4 @@ git pull origin master
 sudo docker rm -f $(sudo docker ps -a -q)
 
 sudo docker build -t postgresql .
-sudo docker run -d -p 8000:8000 postgresql
+sudo docker run -d -p 5432:5432 postgresql
