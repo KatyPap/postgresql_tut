@@ -28,7 +28,7 @@ def select_from_table(table_name):
 # Example query
 table_name = 'FRUITS'
 items = ['Apple']
-insert_into_table(table_name, items)
+# insert_into_table(table_name, items)
 rows = select_from_table(table_name)
 print(rows)
 
