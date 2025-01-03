@@ -2,7 +2,7 @@ import psycopg2
 
 conn = psycopg2.connect(
     host="135.225.108.173",
-    database="app_database",
+    database="pg_db",
     user="katypap",
     password="katypap",
     port="5432"
