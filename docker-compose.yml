@@ -1,8 +1,9 @@
 version: '3.8'
 services:
-  db:
-    image: postgres:latest
-    container_name: postgres_db
+  postgres_db:
+    build: .
+    image: postgres_db_img
+    container_name: postgres_db_cont
     env_file:
       - .env
     environment:
